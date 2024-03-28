@@ -68,7 +68,9 @@ description: rewrite插件
 
 * 参数解释:
   * `regex` : 匹配uri中要重写部分的正则表达式。
-  * `replace` : 替换的内容
+  * `replace` : 替换的内容。
+  * `percentage` : 重写的百分比，100表示100%。
+  * `rewriteMetaData`: 是否重写元数据，true表示开启，开启后可跨插件重写uri。
 
 ## 2.5 示例
 
@@ -76,7 +78,7 @@ description: rewrite插件
 
 #### 2.5.1.1 运行 `shenyu-examples-http` 项目
 
-* 使用[shenyu-examples-http](https://github.com/apache/incubator-shenyu/tree/master/shenyu-examples/shenyu-examples-http), 参考[](../../quick-start/quick-start-http#运行shenyu-examples-http项目)
+* 使用[shenyu-examples-http](https://github.com/apache/shenyu/tree/master/shenyu-examples/shenyu-examples-http), 参考[](../../quick-start/quick-start-http#运行shenyu-examples-http项目)
 
 #### 2.5.1.1 插件配置
 

@@ -151,6 +151,16 @@ export default [
                 date: '2022-07-2',
                 abs:<Translate>In ShenYu gateway, data synchronization refers to how to synchronize the updated data to the gateway after the data is sent in the background management system. The Apache ShenYu gateway currently supports data synchronization for ZooKeeper, WebSocket, http long poll, Nacos, etcd and Consul. The main content of this article is based on WebSocket data synchronization source code analysis.</Translate>
             },
+            {
+                title: <Translate>Apollo Data Synchronization Source Code Analysis</Translate>,
+                author: "hql0312 (Committer)",
+                autImg: "/img/blog/hql0312.png",
+                autPage: "https://github.com/hql0312",
+                src: "DataSync-SourceCode-Analysis-Apollo-Data-Sync",
+                cover: "/img/logo.svg",
+                date: '2024-02-22',
+                abs:<Translate>Introduce Shenyu data sync by apollo.</Translate>
+            },
         ]
     },
     {
@@ -211,8 +221,32 @@ export default [
                 date: '2021-07-2',
                 abs:<Translate>Code Analysis For Divide Plugin</Translate>
             },
+            {
+                title: <Translate>Code Analysis Ext Plugin Loader</Translate>,
+                author: "hql0312 (contributor)",
+                autImg: "/img/blog/hql0312.png",
+                autPage: "https://github.com/hql0312",
+                src: "Loader-SourceCode-Analysis-ExtLoader",
+                cover: "/img/logo.svg",
+                date: '2024-02-04',
+                abs:<Translate>Code Analysis Ext Plugin Loader</Translate>
+            },
         ]
-    }, 
-    
+    },
+    {
+        categray: 'E2e Test',
+        posts: [
+            {
+                title: <Translate>E2e Test Analysis</Translate>,
+                author: "Haiqi Qin (Committer)",
+                autImg: "https://avatars.githubusercontent.com/u/80969210?v=4",
+                autPage:"https://github.com/HaiqiQin",
+                src: "E2eTest-Analysis",
+                cover: "/img/logo.svg",
+                date: '2023-08-20',
+                abs:<Translate>This article will conduct an in-depth analysis of Apache ShenYu e2e module.</Translate>
+            },
+        ]
+    },
 
 ]

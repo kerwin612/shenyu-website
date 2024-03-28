@@ -69,6 +69,8 @@ description: rewrite plugin
 * Param details:
   * `regex`: The regular expression that matches the part of uri to be rewrited.
   * `replace`: The content of replacement.
+  * `percentage` : The percentage of rewriting, 100 represents 100%.
+  * `rewriteMetaData`: Whether to rewrite metadata, true indicates that it is enabled, and once enabled, the uri can be rewritten across plugins.
 
 ## 2.5 Examples
 
@@ -76,7 +78,7 @@ description: rewrite plugin
 
 #### 2.5.1.1 Run the shenyu-examples-http project
 
-* Use [shenyu-examples-http](https://github.com/apache/incubator-shenyu/tree/master/shenyu-examples/shenyu-examples-http), please refer to [Run the shenyu-examples-http project](../../quick-start/quick-start-http#run-the-shenyu-examples-http-project)
+* Use [shenyu-examples-http](https://github.com/apache/shenyu/tree/master/shenyu-examples/shenyu-examples-http), please refer to [Run the shenyu-examples-http project](../../quick-start/quick-start-http#run-the-shenyu-examples-http-project)
 
 #### 2.5.1.1 Plugin Config
 

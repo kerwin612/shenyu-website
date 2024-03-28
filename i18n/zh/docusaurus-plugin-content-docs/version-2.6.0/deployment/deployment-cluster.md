@@ -19,7 +19,7 @@ description: 集群部署
 
 ### 启动 Apache ShenYu Admin
 
-* 在你的网关管理端服务器下载并解压[apache-shenyu-${current.version}-admin-bin.tar.gz](https://archive.apache.org/dist/shenyu/2.6.0/apache-shenyu-incubating-2.6.0-admin-bin.tar.gz) 。
+* 在你的网关管理端服务器下载并解压[apache-shenyu-${current.version}-admin-bin.tar.gz](https://archive.apache.org/dist/shenyu/2.6.0/apache-shenyu-2.6.0-admin-bin.tar.gz) 。
 
 * 配置你的数据库，进入`/conf`目录，在`application.yaml`文件中修改`spring.profiles.active`节点为`mysql`, `pg` or `h2`。
 

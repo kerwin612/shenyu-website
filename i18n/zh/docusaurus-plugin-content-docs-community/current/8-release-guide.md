@@ -209,25 +209,12 @@ cd ~/svn_release/dev/
 svn --username=${LDAP ID} co https://dist.apache.org/repos/dist/dev/shenyu
 mkdir -p ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
 cd ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-src-dist/target/*.zip ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-src-dist/target/*.zip.asc ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-bootstrap-dist/target/*.tar.gz ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-bootstrap-dist/target/*.tar.gz.asc ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-admin-dist/target/*.tar.gz ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
-cp -f ~/shenyu/shenyu-dist/shenyu-admin-dist/target/*.tar.gz.asc ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
+cp -f ~/shenyu/shenyu-dist/shenyu-src-dist/target/*.zip* ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
+cp -f ~/shenyu/shenyu-dist/shenyu-bootstrap-dist/target/*.tar.gz* ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
+cp -f ~/shenyu/shenyu-dist/shenyu-admin-dist/target/*.tar.gz* ~/svn_release/dev/shenyu/${PUBLISH.VERSION}
 ```
 
-**3. 添加校验文件**
-
-根据 [Requirements for cryptographic signatures and checksums](https://infra.apache.org/release-distribution#sigs-and-sums) [7] 的说明添加校验文件。
-
-```shell
-shasum -a 512 apache-shenyu-${PUBLISH.VERSION}-src.zip > apache-shenyu-${PUBLISH.VERSION}-src.zip.sha512
-shasum -b -a 512 apache-shenyu-${PUBLISH.VERSION}-bootstrap-bin.tar.gz > apache-shenyu-${PUBLISH.VERSION}-bootstrap-bin.tar.gz.sha512
-shasum -b -a 512 apache-shenyu-${PUBLISH.VERSION}-admin-bin.tar.gz > apache-shenyu-${PUBLISH.VERSION}-admin-bin.tar.gz.sha512
-```
-
-**4. 提交新版本**
+**3. 提交新版本**
 
 ```shell
 cd ~/svn_release/dev/shenyu
@@ -335,7 +322,7 @@ The release candidates:
 https://dist.apache.org/repos/dist/dev/shenyu/${PUBLISH.VERSION}/
 
 Maven 2 staging repository:
-https://repository.apache.org/content/repositories/${STAGING.RELEASE}/org/apache/shenyu/
+https://repository.apache.org/content/repositories/staging/org/apache/shenyu/shenyu/${STAGING.RELEASE}/
 
 Git tag for the release:
 https://github.com/apache/shenyu/tree/v${PUBLISH.VERSION}/
@@ -412,8 +399,8 @@ Thanks everyone for taking the time to verify and vote for the release!
 根据 [Uploading packages](https://infra.apache.org/release-publishing.html#uploading) [6] 的说明将新版本从 dev 目录转移到 release 目录。
 
 ```shell
-svn mv https://dist.apache.org/repos/dist/dev/shenyu/${PUBLISH.VERSION} hhttps://dist.apache.org/repos/dist/release/shenyu/ -m "transfer packages for ${PUBLISH.VERSION}"
-svn delete hhttps://dist.apache.org/repos/dist/release/shenyu/${PREVIOUS.RELEASE.VERSION}
+svn mv https://dist.apache.org/repos/dist/dev/shenyu/${PUBLISH.VERSION} https://dist.apache.org/repos/dist/release/shenyu/ -m "transfer packages for ${PUBLISH.VERSION}"
+svn delete https://dist.apache.org/repos/dist/release/shenyu/${PREVIOUS.RELEASE.VERSION}
 ```
 
 **2. 完成 Maven 发布**

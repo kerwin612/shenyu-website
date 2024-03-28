@@ -3,6 +3,22 @@ import Translate from "@docusaurus/Translate";
 
 export default [
   {
+    title: <Translate>Release Apache Shenyu 2.6.1</Translate>,
+    description:
+        "New Features  \n  1. Add dubbo annotation analysis for shenyu ingress controller \n  2. Support alert notice \n  3. Add nacos, etcd, eureka as discovery service \n  ......",
+    src: "2.6.1-release",
+  },
+  {
+    title: <Translate>Release Apache ShenYu WASM 1.0.0</Translate>,
+    description:
+        "New Features  \n" +
+        "  Simplify usage \n" +
+        "  Support the use of user-defined dynamic link libraries \n" +
+        "Refactor \n" +
+        "  Refactor repository from wasmer-java",
+    src: "shenyu-wasm-1.0.0-release",
+  },
+  {
     title: <Translate>Release Apache Shenyu 2.6.0</Translate>,
     description:
         "New Features  \n  Support shenyu-admin expose prometheus metrics \n  2. Add shenyu Level-1 cache and Level-2 cache \n  3. Save extend plugin jar to shenyu admin \n  ......",

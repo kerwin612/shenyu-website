@@ -45,7 +45,7 @@ description: Apache ShenYu 是一个异步的，高性能的，跨语言的，�
 ```
 docker pull apache/shenyu-admin
 docker network create shenyu
-docker run -d -p 9095:9095 --net shenyu apache/shenyu-admin
+docker run -d -p 9095:9095 --name shenyu-admin --net shenyu apache/shenyu-admin
 ```
 
 默认账号: **admin**
@@ -56,7 +56,7 @@ docker run -d -p 9095:9095 --net shenyu apache/shenyu-admin
 
 ```
 docker pull apache/shenyu-bootstrap
-docker run -d -p 9195:9195 -e "shenyu.local.enabled=true" --net shenyu apache/shenyu-bootstrap
+docker run -d -p 9195:9195 -e "shenyu.local.enabled=true" -e SHENYU_SYNC_WEBSOCKET_URLS=ws://shenyu-admin:9095/websocket --net shenyu apache/shenyu-bootstrap
 ```
 
 ### 路由设置
@@ -120,7 +120,7 @@ curl --location --request POST 'http://localhost:9195/shenyu/plugin/selectorAndR
 
   如果要自定义，见[自定义插件](https://shenyu.apache.org/docs/developer/custom-plugin/)
 
----  
+---
 
 # Selector & Rule
 
@@ -132,7 +132,7 @@ curl --location --request POST 'http://localhost:9195/shenyu/plugin/selectorAndR
 
   Selector和Rule只匹配一次，然后返回匹配结果。因此最粗的粒度应该最后排序。
 
----  
+---
 
 # Data Caching & Data Sync
 
@@ -156,14 +156,14 @@ curl --location --request POST 'http://localhost:9195/shenyu/plugin/selectorAndR
 
 <a href="https://starchart.cc/apache/incubator-shenyu.svg"><img src="https://starchart.cc/apache/incubator-shenyu.svg"/></a>
 
----  
+---
 
 # 贡献与支持
 
 * [贡献方式](https://shenyu.apache.org/community/contributor-guide)
 * [邮件我们](mailto:dev@shenyu.apache.org)
 
----  
+---
 
 # 已知用户
 
